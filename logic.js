@@ -34,11 +34,11 @@ var todoFunctions = {
       return -1;
     let newArray=todos.map(todo=>({...todo}));
     let obj={};
-     obj.id= todoFunctions.generateId();
-     obj.description=newTodo;
-     obj.done=false;
-      todos.push(obj);
-     return todos;
+    obj.id= todoFunctions.generateId();
+    obj.description=newTodo;
+    obj.done=false;
+    newArray.push(obj);
+    return newArray;
   },
   deleteTodo: function(todos, idToDelete) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
