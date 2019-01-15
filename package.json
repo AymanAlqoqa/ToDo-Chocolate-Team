@@ -1,0 +1,23 @@
+{
+  "name": "todo-chocolate-team",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dom.js",
+  "scripts": {
+    "test": "tape ./test.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AymanAlqoqa/ToDo-Chocolate-Team.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AymanAlqoqa/ToDo-Chocolate-Team/issues"
+  },
+  "homepage": "https://github.com/AymanAlqoqa/ToDo-Chocolate-Team#readme",
+  "devDependencies": {
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.2"
+  }
+}
