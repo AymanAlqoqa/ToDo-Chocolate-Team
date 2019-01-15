@@ -18,7 +18,7 @@ var todoFunctions = {
   //cloneArrayOfObjects will create a copy of the todos array
   //changes to the new array don't affect the original
   cloneArrayOfObjects: function(todos) {
-    return todos.map(function(todo){
+    return todos.map(function(todo) {
       return JSON.parse(JSON.stringify(todo));
     });
   },
@@ -39,6 +39,21 @@ var todoFunctions = {
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
     // hint: array.map
+    //clone the origin array
+    let newToDos = todos.map(element => ({...element}));
+    //to go inside the array
+    for (var i in newToDos) {
+      //to go inside the object in array
+      if (newToDos[i].id === idToMark) {
+        //if done true change to false and if false change to false
+        if (newToDos[i].done === true){
+          newToDos[i].done=false;
+        }else {
+          newToDos[i].done=true;
+        }
+      }
+    }
+    return newToDos;
   },
   sortTodos: function(todos, sortFunction) {
     // stretch goal! Do this last
